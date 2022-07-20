@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.JohnnyCarvalho.loginandregisterpage.models.UserData;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserData, UUID> {
+public interface UserDataRepository extends JpaRepository<UserData, UUID> {
 
 }
