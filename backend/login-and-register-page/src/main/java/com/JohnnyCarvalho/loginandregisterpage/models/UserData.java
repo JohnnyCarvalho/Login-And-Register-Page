@@ -10,10 +10,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Email;
+
 
 @Entity
-@Table(name = "tb_user_data")
+@Table(name = "user_data")
 public class UserData implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -31,7 +31,7 @@ public class UserData implements Serializable {
 	private Date birthDate;
 	
 	@Column(nullable  = false, unique = true, length = 20)
-	private Email email;
+	private String email;
 	
 	@Column(nullable = false, unique = true, length = 20)
 	private String userName;
@@ -77,11 +77,11 @@ public class UserData implements Serializable {
 		this.birthDate = birthDate;
 	}
 
-	public Email getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(Email email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
