@@ -11,4 +11,9 @@ public class LoginAndRegisterPageApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LoginAndRegisterPageApplication.class, args);
 	}
+	
+	@GetMapping
+	public String index() {
+		return "Hello World!";
+	}
 }
