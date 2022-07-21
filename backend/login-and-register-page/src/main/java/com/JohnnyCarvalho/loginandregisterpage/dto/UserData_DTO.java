@@ -17,7 +17,7 @@ public class UserData_DTO {
 	private String lastName;
 	
 	@NotBlank
-	private Date birthDate;
+	private String birthDate;
 	
 	@NotBlank
 	@Email
@@ -45,11 +45,11 @@ public class UserData_DTO {
 		this.lastName = lastName;
 	}
 
-	public Date getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 

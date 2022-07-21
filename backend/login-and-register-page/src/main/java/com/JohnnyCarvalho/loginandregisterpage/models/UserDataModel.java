@@ -13,8 +13,8 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "user_data")
-public class UserData implements Serializable {
+@Table(name = "tb_login_and_register_page")
+public class UserDataModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -28,7 +28,7 @@ public class UserData implements Serializable {
 	private String lastName;
 	
 	@Column(nullable = false, length = 10)
-	private Date birthDate;
+	private String birthDate;
 	
 	@Column(nullable  = false, unique = true, length = 20)
 	private String email;
@@ -40,7 +40,7 @@ public class UserData implements Serializable {
 	private String password;
 	
 	// CONSTRUCTOR
-	public UserData() {
+	public UserDataModel() {
 
 	}
 	
@@ -69,11 +69,11 @@ public class UserData implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public Date getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 
