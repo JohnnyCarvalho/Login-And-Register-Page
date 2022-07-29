@@ -17,7 +17,7 @@ import com.JohnnyCarvalho.loginandregisterpage.services.UserDataService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/register")
+@RequestMapping(value = "/register")
 public class UserDataController {
 	
 	final UserDataService userDataService;

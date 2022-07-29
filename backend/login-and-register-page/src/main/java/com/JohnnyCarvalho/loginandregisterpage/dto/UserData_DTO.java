@@ -1,9 +1,9 @@
 package com.JohnnyCarvalho.loginandregisterpage.dto;
 
-import java.util.Date;
 
 
-import javax.validation.constraints.Email;
+
+
 import javax.validation.constraints.NotBlank;
 
 
@@ -17,10 +17,6 @@ public class UserData_DTO {
 	private String lastName;
 	
 	@NotBlank
-	private String birthDate;
-	
-	@NotBlank
-	@Email
 	private String email;
 	
 	@NotBlank
@@ -28,6 +24,8 @@ public class UserData_DTO {
 	
 	@NotBlank
 	private String password;
+	
+	
 
 	public String getFirstName() {
 		return firstName;
@@ -43,14 +41,6 @@ public class UserData_DTO {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(String birthDate) {
-		this.birthDate = birthDate;
 	}
 
 	public String getEmail() {

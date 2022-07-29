@@ -1,7 +1,6 @@
 package com.JohnnyCarvalho.loginandregisterpage.models;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.UUID;
 
 import javax.persistence.Column;
@@ -27,22 +26,21 @@ public class UserDataModel implements Serializable {
 	@Column(nullable = false, length = 20)
 	private String lastName;
 	
-	@Column(nullable = false, length = 10)
-	private String birthDate;
-	
 	@Column(nullable  = false, unique = true, length = 20)
 	private String email;
 	
 	@Column(nullable = false, unique = true, length = 20)
 	private String userName;
 	
-	@Column(nullable = false, unique = false, length = 20)
+	@Column(nullable = false, length = 20)
 	private String password;
 	
 	// CONSTRUCTOR
 	public UserDataModel() {
 
 	}
+	
+	
 	
 	// GETTERS AND SETTERS
 	public UUID getId() {
@@ -67,14 +65,6 @@ public class UserDataModel implements Serializable {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(String birthDate) {
-		this.birthDate = birthDate;
 	}
 
 	public String getEmail() {
